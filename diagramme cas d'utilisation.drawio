@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0" version="24.7.6">
   <diagram name="Page-1" id="abaU5teWBHSIh3knwFKt">
-    <mxGraphModel dx="2453" dy="1960" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1756" dy="1621" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -43,7 +43,7 @@
             <mxPoint x="60" y="610" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ytxkbaWUz_GBkNSJb9Mm-20" value="-modifier les information d&#39;élèves&amp;nbsp;&lt;div style=&quot;&quot;&gt;-ajouter List d&#39;élèves pour chaque cours&lt;/div&gt;&lt;div&gt;_retirer les élèves pour chaque cours&lt;/div&gt;&lt;div&gt;_attribuer les id (auto)&lt;/div&gt;&lt;div&gt;_ajouter les note examen pour chaque l&#39;élèves&amp;nbsp;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;rotation=0;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+        <mxCell id="ytxkbaWUz_GBkNSJb9Mm-20" value="- modifier les information d&#39;élèves&amp;nbsp;&lt;div style=&quot;&quot;&gt;- ajouter List d&#39;élèves pour chaque cours&lt;/div&gt;&lt;div&gt;- retirer les élèves pour chaque cours&lt;/div&gt;&lt;div&gt;- attribuer les id (auto)&lt;/div&gt;&lt;div&gt;- ajouter les note examen pour chaque l&#39;élèves&amp;nbsp;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;rotation=0;align=left;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
           <mxGeometry x="520" y="380" width="270" height="90" as="geometry" />
         </mxCell>
         <mxCell id="ytxkbaWUz_GBkNSJb9Mm-21" value="" style="endArrow=none;html=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" source="ytxkbaWUz_GBkNSJb9Mm-23" edge="1">
@@ -82,8 +82,8 @@
             <mxPoint x="390" y="30" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tsSxHWKioVlDDUs3cD3j-7" value="_modifier, ajouter et supprimer les cours&amp;nbsp;&lt;div&gt;_par un agenda&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
-          <mxGeometry x="630" y="500" width="160" height="60" as="geometry" />
+        <mxCell id="tsSxHWKioVlDDUs3cD3j-7" value="-&amp;nbsp; modifier, ajouter et - supprimer les cours&amp;nbsp;&lt;div&gt;_par un agenda&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="630" y="500" width="250" height="60" as="geometry" />
         </mxCell>
         <mxCell id="tsSxHWKioVlDDUs3cD3j-8" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="ytxkbaWUz_GBkNSJb9Mm-12" target="tsSxHWKioVlDDUs3cD3j-7" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -91,7 +91,7 @@
             <mxPoint x="400" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tsSxHWKioVlDDUs3cD3j-10" value="_modifier les information des enseignant&lt;div&gt;_faire un évènement&amp;nbsp;&lt;/div&gt;&lt;div&gt;_les dates d&#39;entrée de chaque&amp;nbsp;&amp;nbsp;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#e1d5e7;strokeColor=#9673a6;align=left;" parent="1" vertex="1">
+        <mxCell id="tsSxHWKioVlDDUs3cD3j-10" value="- modifier les information des enseignant&lt;div&gt;- faire un évènement&amp;nbsp;&lt;/div&gt;&lt;div&gt;- les dates d&#39;entrée de chaque&amp;nbsp;&amp;nbsp;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#e1d5e7;strokeColor=#9673a6;align=left;" parent="1" vertex="1">
           <mxGeometry x="610" y="592.5" width="180" height="115" as="geometry" />
         </mxCell>
         <mxCell id="tsSxHWKioVlDDUs3cD3j-11" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.965;entryY=0.348;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="tsSxHWKioVlDDUs3cD3j-10" target="ytxkbaWUz_GBkNSJb9Mm-23" edge="1">
