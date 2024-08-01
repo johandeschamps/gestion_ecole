@@ -19,7 +19,7 @@
         <mxCell id="ytxkbaWUz_GBkNSJb9Mm-5" value="Directeur&amp;nbsp;" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="10" y="570" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ytxkbaWUz_GBkNSJb9Mm-7" value="consulter les cours" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="ytxkbaWUz_GBkNSJb9Mm-7" value="consulter les cours" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="430" y="-130" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="ytxkbaWUz_GBkNSJb9Mm-12" value="Gérer les cours" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
@@ -74,12 +74,12 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="tsSxHWKioVlDDUs3cD3j-5" value="_par un agenda&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="630" y="90" width="130" height="45" as="geometry" />
+          <mxGeometry x="520" y="-50" width="150" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="tsSxHWKioVlDDUs3cD3j-6" value="" style="endArrow=none;dashed=1;html=1;rounded=0;entryX=0.088;entryY=0.735;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="tsSxHWKioVlDDUs3cD3j-5" target="tsSxHWKioVlDDUs3cD3j-12">
+        <mxCell id="tsSxHWKioVlDDUs3cD3j-6" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1" source="tsSxHWKioVlDDUs3cD3j-5">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="350" y="400" as="sourcePoint" />
-            <mxPoint x="320" y="330" as="targetPoint" />
+            <mxPoint x="390" y="30" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="tsSxHWKioVlDDUs3cD3j-7" value="_modifier, ajouter et supprimer les cours&amp;nbsp;&lt;div&gt;_par un agenda&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
