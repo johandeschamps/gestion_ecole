@@ -55,8 +55,8 @@
             <mxPoint x="430" y="400" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="tsSxHWKioVlDDUs3cD3j-3" value="_ par un agenda&lt;div&gt;_par les matières&amp;nbsp;&amp;nbsp;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#e1d5e7;strokeColor=#9673a6;align=left;" parent="1" vertex="1">
-          <mxGeometry x="210" y="-90" width="190" height="50" as="geometry" />
+        <mxCell id="tsSxHWKioVlDDUs3cD3j-3" value="_ par un agenda" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#e1d5e7;strokeColor=#9673a6;align=left;" parent="1" vertex="1">
+          <mxGeometry x="210" y="-90" width="190" height="30" as="geometry" />
         </mxCell>
         <mxCell id="tsSxHWKioVlDDUs3cD3j-4" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" parent="1" target="tsSxHWKioVlDDUs3cD3j-3" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
