@@ -1,11 +1,9 @@
 from abc import *
 from dataclasses import *
+from typing import Protocol
 
 
-@dataclass
-class UserInput(ABC):
-
-    @abstractmethod
+class Inputable(Protocol):
     def user_input(self) -> bool:
         """
         Fills out the object's fields based on user intput

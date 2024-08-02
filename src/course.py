@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 
-from src.inputable import UserInput
+from src.inputable import Inputable
 
 
 @dataclass
-class Course(UserInput):
+class Course(Inputable):
     pass

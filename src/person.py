@@ -2,11 +2,11 @@ from abc import *
 from dataclasses import *
 
 from src.address import Address
-from src.inputable import UserInput
+from src.inputable import Inputable
 
 
 @dataclass
-class Person(UserInput):
+class Person(Inputable):
     first_name: str
     last_name: str
     age: int

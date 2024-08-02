@@ -1,10 +1,10 @@
 from dataclasses import *
 
-from src.inputable import UserInput
+from src.inputable import Inputable
 
 
 @dataclass
-class Address(UserInput):
+class Address(Inputable):
     postal_code: int
     city: str
     street_name: str
