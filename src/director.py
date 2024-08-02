@@ -1,8 +1,13 @@
 from dataclasses import dataclass
 
-from src.person import Person
+
+from person import Person
+from address import Address
+from student import Student
+from teacher import Teacher
+from course import Course
 
 
 @dataclass
 class Director(Person):
-    pass
+    
