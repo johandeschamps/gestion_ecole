@@ -16,6 +16,7 @@ class Person(Inputable):
         self.first_name = input("First name: ")
         self.last_name = input("Last name: ")
         self.age = int(input("Age: "))
+        print("# Address :")
         self.address.user_input()
-
+        print("-")
         return True
