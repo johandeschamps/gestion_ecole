@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 
-from src.user_input import UserInput
+from src.inputable import UserInput
 
 
 @dataclass

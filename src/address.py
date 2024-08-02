@@ -1,6 +1,6 @@
 from dataclasses import *
 
-from src.user_input import UserInput
+from src.inputable import UserInput
 
 
 @dataclass
@@ -9,7 +9,7 @@ class Address(UserInput):
     city: str
     street_name: str
 
-    def userInput(self) -> bool:
+    def user_input(self) -> bool:
         self.city = input("City: ")
         self.postal_code = int(input("Postal code: ").strip())
         self.street_name = input("Street name: ")
