@@ -1,6 +1,6 @@
-<mxfile host="drawio-plugin" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" modified="2024-08-02T13:11:44.690Z" etag="ZrGeWpcHKB764a0fVgbB" version="22.1.22" type="embed">
+<mxfile host="drawio-plugin" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" modified="2024-08-02T13:19:24.022Z" etag="W3F9-x9IcY4fj9br0A81" version="22.1.22" type="embed">
   <diagram name="Page-1" id="5e1hApsxt1_k2KYxcRRe">
-    <mxGraphModel dx="1471" dy="308" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1711" dy="308" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -84,7 +84,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="0-rDXfHknbJrmzrThzKK-7" value="Teacher" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="150" y="560" width="140" height="140" as="geometry" />
+          <mxGeometry x="150" y="560" width="140" height="100" as="geometry" />
         </mxCell>
         <mxCell id="0-rDXfHknbJrmzrThzKK-13" value="+ entry_date: DateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="0-rDXfHknbJrmzrThzKK-7" vertex="1">
           <mxGeometry y="26" width="140" height="26" as="geometry" />
@@ -92,11 +92,8 @@
         <mxCell id="13" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="0-rDXfHknbJrmzrThzKK-7" vertex="1">
           <mxGeometry y="52" width="140" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="14" value="+ get_students() : List[Student]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="0-rDXfHknbJrmzrThzKK-7" vertex="1">
+        <mxCell id="37" value="+ get_course(name) : Course" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="0-rDXfHknbJrmzrThzKK-7">
           <mxGeometry y="60" width="140" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="15" value="+ get_note(Student) : Note" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="0-rDXfHknbJrmzrThzKK-7" vertex="1">
-          <mxGeometry y="100" width="140" height="40" as="geometry" />
         </mxCell>
         <mxCell id="0-rDXfHknbJrmzrThzKK-9" value="" style="endArrow=block;endFill=0;html=1;rounded=0;entryX=0.575;entryY=1.116;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="0-rDXfHknbJrmzrThzKK-7" target="mFrYlg1bk1QKZE4jiOjr-56" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
@@ -129,7 +126,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="0-rDXfHknbJrmzrThzKK-14" value="Course" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="650" y="530" width="160" height="104" as="geometry" />
+          <mxGeometry x="650" y="530" width="160" height="192" as="geometry" />
         </mxCell>
         <mxCell id="0-rDXfHknbJrmzrThzKK-15" value="+ name : str" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="0-rDXfHknbJrmzrThzKK-14" vertex="1">
           <mxGeometry y="26" width="160" height="26" as="geometry" />
@@ -139,6 +136,15 @@
         </mxCell>
         <mxCell id="0-rDXfHknbJrmzrThzKK-17" value="+ end_date : DateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="0-rDXfHknbJrmzrThzKK-14" vertex="1">
           <mxGeometry y="78" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="34" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="0-rDXfHknbJrmzrThzKK-14">
+          <mxGeometry y="104" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="+ get_students() : List[Student]" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="0-rDXfHknbJrmzrThzKK-14">
+          <mxGeometry y="112" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="36" value="+ get_note(Student) : Note" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="0-rDXfHknbJrmzrThzKK-14">
+          <mxGeometry y="152" width="160" height="40" as="geometry" />
         </mxCell>
         <mxCell id="0-rDXfHknbJrmzrThzKK-18" value="Note" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="520" y="360" width="140" height="52" as="geometry" />

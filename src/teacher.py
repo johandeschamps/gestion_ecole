@@ -13,6 +13,7 @@ class Teacher(Person):
     entry_date: datetime.date
     courses: List[Course] = field(default_factory=list)
 
+    # TODO : Move to course
     def get_note(self, student: Student) -> Note:
         """
 
@@ -21,7 +22,7 @@ class Teacher(Person):
         """
         ...
 
-    def get_students(self) -> List[Student]:
+    def get_course(self,name : str) -> Course:
         ...
 
     def user_input(self) -> bool:
