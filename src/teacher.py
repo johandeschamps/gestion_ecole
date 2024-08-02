@@ -11,7 +11,7 @@ from src.student import Student
 @dataclass
 class Teacher(Person):
     entry_date: datetime.date
-    course: Course
+    courses: List[Course] = field(default_factory=list)
 
     def get_note(self, student: Student) -> Note:
         """
@@ -27,4 +27,4 @@ class Teacher(Person):
     def user_input(self) -> bool:
         super().user_input()
         self.entry_date = datetime.date.fromisoformat(input("Entry date (YYYY-MM-DD) : "))
-        # TODO : Course
+        return True
