@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from datetime import datetime
+from typing import List
 
+from gestion_ecole.src.student import Student
 from inputable import Inputable
 
 
@@ -21,6 +23,7 @@ class Course(Inputable):
     name: str
     begin_date: datetime
     end_date: datetime
+    students: List[Student]
 
     def input_course_details(self) -> str:
         """
