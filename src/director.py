@@ -126,3 +126,10 @@ def modify_teacher_info(self, teacher: Teacher, first_name: str , last_name: str
     else:
         raise ValueError("This teacher is not register")
 
+def add_course(self, course: Course):
+        if course not in self.courses:
+            self.courses.append(course)
+        else:
+            raise ValueError("this course is already exist.")
+
+
