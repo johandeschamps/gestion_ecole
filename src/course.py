@@ -24,6 +24,7 @@ class Course(UserInput):
 
     def course(self) -> str:
     """
+
     Prompts the user to input the course details and returns a formatted string.
 
     Returns
@@ -31,9 +32,13 @@ class Course(UserInput):
     str
             A string containing the course name, begin date, and end date.
     """
-        self.name = input("Name of course: ")
-        self.begin_date = input("Begin date of course: ")
-        self.end_date = input("End date of course: ")
-        print (f"Course: {name}, Begin Date: {begin_date}, End Date: {end_date}")
+    self.name = input("Name of course: ")
+    self.begin_date = input("Begin date of course: ")
+    self.end_date = input("End date of course: ")
 
+def current_course(self, date):
+    if self.begin_date < date< self.end_date:
+        print("this course is active")
+    else:
+        print("the course is already finished")
 
