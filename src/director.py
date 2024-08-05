@@ -262,23 +262,3 @@ class Director(Person):
             result[course.name] = course_info
         return result
 
-    # Test the classes
-
-
-if __name__ == "__main__":
-    address = Address(street="123 Main St", city="Anytown", state="Anystate", zip_code="12345")
-    student1 = Student(first_name="John", last_name="Doe", age=20, address=address)
-    student2 = Student(first_name="Jane", last_name="Doe", age=22, address=address)
-    teacher = Teacher(first_name="Dr.", last_name="Smith", age=45, address=address, entry_date="2020-09-01")
-    course = Course(name="Biology 101", start_date="2024-09-01", end_date="2024-12-15", students=[student1])
-
-    director = Director(first_name="Principal", last_name="Johnson", age=50, address=address)
-    director.add_student(student1)
-    director.add_teacher(teacher)
-    director.add_course(course)
-
-    print(director.get_students())
-    print(director.get_teachers())
-    print(director.get_courses())
-    director.assign_course(teacher, course)
-    print(director.course_with_teacher())
