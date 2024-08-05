@@ -9,5 +9,4 @@ class Inputable(Protocol):
         Fills out the object's fields based on user intput
         :return: if the input was sucessful
         """
-
         ...
