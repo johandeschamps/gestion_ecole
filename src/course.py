@@ -1,11 +1,11 @@
 from dataclasses import dataclass
 from datetime import datetime
 
-from src.user_input import UserInput
+from src.inputable import Inputable
 
 
 @dataclass
-class Course(UserInput):
+class Course(Inputable):
     """
     A class to represent a course.
 
