@@ -92,3 +92,18 @@ def remove_teacher(self, teacher: Teacher):
             self.teachers.remove(teacher)
         else:
             raise ValueError("there is not this teacher.")
+
+
+def modify_student_info(self, student: Student, first_name: str , last_name: str , age: int ,
+                        address: str):
+    if student in self.students:
+        if first_name:
+            student.first_name = first_name
+        if last_name:
+            student.last_name = last_name
+        if age:
+            student.age = age
+        if address:
+            student.address = address
+    else:
+        raise ValueError("this student is not registered.")
