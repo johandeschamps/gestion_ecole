@@ -2,20 +2,21 @@ from abc import *
 from dataclasses import *
 
 from src.address import Address
-from src.user_input import UserInput
+from src.inputable import Inputable
 
 
 @dataclass
-class Person(UserInput):
+class Person(Inputable):
     first_name: str
     last_name: str
     age: int
     address: Address
 
-    def userInput(self) -> bool:
+    def user_input(self) -> bool:
         self.first_name = input("First name: ")
         self.last_name = input("Last name: ")
         self.age = int(input("Age: "))
-        self.address.userInput()
-
+        print("# Address :")
+        self.address.user_input()
+        print("-")
         return True

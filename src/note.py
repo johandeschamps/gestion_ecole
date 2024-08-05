@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 
-from src.user_input import UserInput
+from src.inputable import Inputable
 
 
 @dataclass
-class Note(UserInput):
+class Note(Inputable):
     pass
