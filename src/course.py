@@ -13,32 +13,42 @@ class Course(UserInput):
     ----------
     name : str
         The name of the course.
-    begin_date : int
+    begin_date : datetime
         The start date of the course.
-    end_date : int
+    end_date : datetime
         The end date of the course.
     """
-    name : str
-    begin_date : datetime
-    end_date : datetime
+    name: str
+    begin_date: datetime
+    end_date: datetime
 
-    def course(self) -> str:
-    """
+    def input_course_details(self) -> str:
+        """
+        Prompts the user to input the course details and returns a formatted string.
 
-    Prompts the user to input the course details and returns a formatted string.
-
-    Returns
-    -------
-    str
+        Returns
+        -------
+        str
             A string containing the course name, begin date, and end date.
-    """
-    self.name = input("Name of course: ")
-    self.begin_date = input("Begin date of course: ")
-    self.end_date = input("End date of course: ")
+        """
+        self.name = input("Name of course: ")
+        begin_date_str = input("Begin date of course (YYYY-MM-DD): ")
+        end_date_str = input("End date of course (YYYY-MM-DD): ")
+        self.begin_date = datetime.strptime(begin_date_str, "%Y-%m-%d")
+        self.end_date = datetime.strptime(end_date_str, "%Y-%m-%d")
 
-def current_course(self, date):
-    if self.begin_date < date< self.end_date:
-        print("this course is active")
-    else:
-        print("the course is already finished")
+        return f"Course: {self.name}, Begin date: {self.begin_date}, End date: {self.end_date}"
 
+    def current_course(self, date: datetime) -> None:
+        """
+        Checks if the course is active on the given date.
+
+        Parameters
+        ----------
+        date : datetime
+            The date to check against the course's begin and end dates.
+        """
+        if self.begin_date < date < self.end_date:
+            print("This course is active")
+        else:
+            print("The course is already finished or has not started yet")
