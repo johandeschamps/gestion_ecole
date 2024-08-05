@@ -32,9 +32,9 @@ class Course(UserInput):
     str
             A string containing the course name, begin date, and end date.
     """
-    self.name = input("Name of course: ")
-    self.begin_date = input("Begin date of course: ")
-    self.end_date = input("End date of course: ")
+    name = input("Name of course: ")
+    begin_date = input("Begin date of course: ")
+    end_date = input("End date of course: ")
 
 def current_course(self, date):
     if self.begin_date < date< self.end_date:
