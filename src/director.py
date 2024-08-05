@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Dict
 from dataclasses import dataclass, field
 from person import Person
 from student import Student
@@ -115,3 +115,18 @@ class Director(Person):
             self.courses.append(course)
         else:
             raise ValueError("This course already exists.")
+
+    def course_with_teacher (self) -> Dict[str, Dict[str, List[str]]]:
+        result = {}
+        for course in self.courses:
+            course_info = {
+                "teacher": None,
+                "students": [student.first_name + " " + student.last_name for student in course.students]
+            }
+            for teacher in self.teachers:
+                if course in teacher.courses:
+                    course_info["teacher"] = teacher.first_name + " " + teacher.last_name
+                    break
+            result[course.name] = course_info
+        return result
+
