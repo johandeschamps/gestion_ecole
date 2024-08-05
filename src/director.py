@@ -5,6 +5,7 @@ from person import Person
 from student import Student
 from teacher import Teacher
 from course import Course
+from  address import Address
 
 
 @dataclass
@@ -107,3 +108,21 @@ def modify_student_info(self, student: Student, first_name: str , last_name: str
             student.address = address
     else:
         raise ValueError("this student is not registered.")
+
+
+def modify_teacher_info(self, teacher: Teacher, first_name: str , last_name: str, age: int ,
+                        address: Address, entry_date):
+    if teacher in self.teachers:
+        if first_name:
+            teacher.first_name = first_name
+        if last_name:
+            teacher.last_name = last_name
+        if age:
+            teacher.age = age
+        if address:
+            teacher.address = address
+        if entry_date:
+            teacher.entry_date = entry_date
+    else:
+        raise ValueError("This teacher is not register")
+
