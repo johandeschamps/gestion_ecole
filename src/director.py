@@ -66,7 +66,7 @@ def extend_course_date(self, course: Course, new_end_date: str):
         if course in self.courses:
             course.end_date = new_end_date
         else:
-            raise ValueError("this course is not alredy registered.")
+            raise ValueError("this course is not already registered.")
 
 def add_student(self, student: Student):
         if student not in self.students:
@@ -74,3 +74,21 @@ def add_student(self, student: Student):
         else:
             raise ValueError("this student is already registered.")
 
+
+def remove_student(self, student: Student):
+    if student in self.students:
+        self.students.remove(student)
+    else:
+        raise ValueError("there is not this student in this list")
+
+def add_teacher(self, teacher:Teacher):
+        if teacher not in self.teachers:
+            self.teachers.append(teacher)
+        else:
+            raise ValueError("this teacher didn't registered.")
+
+def remove_teacher(self, teacher: Teacher):
+        if teacher in self.teachers:
+            self.teachers.remove(teacher)
+        else:
+            raise ValueError("there is not this teacher.")
