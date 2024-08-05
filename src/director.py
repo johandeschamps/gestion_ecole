@@ -60,3 +60,11 @@ def modify_course(self, course: Course, name: str , start_date: str , end_date: 
             course.end_date = end_date
     else:
         raise ValueError("this course is not already registered")
+
+
+def extend_course_date(self, course: Course, new_end_date: str):
+        if course in self.courses:
+            course.end_date = new_end_date
+        else:
+            raise ValueError("this course is not alredy registered.")
+
