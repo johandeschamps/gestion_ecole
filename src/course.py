@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from datetime import datetime
 
-from src.inputable import Inputable
+from inputable import Inputable
 
 
 @dataclass
