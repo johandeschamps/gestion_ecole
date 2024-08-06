@@ -3,6 +3,7 @@ import datetime
 import os
 from typing import List, Callable, Optional, TypeVar
 
+from src import inputs
 from src.address import Address
 from src.course import Course
 from src.director import Director
@@ -18,6 +19,8 @@ T = TypeVar('T', bound='Inputable')
 def asc_modify(list: List[T], header: str, other: List[T],add: Optional[Callable[[List[T], T], None]] = None,remove: Optional[Callable[[List[T], T], None]] = None):
     """
 
+    :param remove: if set is invoked in place of remove
+    :param add: if set is invoked in place of add
     :param list: List to choose from
     :param header: List's header
     :param other: List to modify
@@ -107,6 +110,7 @@ def student(st: Student):
     while True:
         print("1. Consulter notes")
         print("2. Consulter cours")
+        print("3. Consulter les cours pour une date")
 
         n = input("")
 
@@ -118,6 +122,14 @@ def student(st: Student):
             case "2":
                 for x in st.courses:
                     print(x)
+            case "3":
+                date = inputs.date("Date : ")
+                for v in st.courses:
+                    if v.begin_date <= date <= v.end_date:
+                        print(v)
+            case "":
+                break
+
 
 
 def teacher(teacher: Teacher):
@@ -144,25 +156,12 @@ def teacher(teacher: Teacher):
                     if eleve is not None:
                         note = eleve.get_note(cours)
                         note.user_input()
+            case "":
+                break
 
 
-def main():
-    x = Director("A", "A", 29, Address(3, "X", "Z"))
 
-    x.add_student(Student("A", "A", 29, Address(3, "X", "Z"), -1))
-
-    x.add_teacher(Teacher("X", "A", 29, Address(3, "X", "Z"), datetime.date.today()))
-
-    x.add_course(Course("F", datetime.date.today(), datetime.date.today(), []))
-
-    x.teachers[0].courses.append(x.courses[0])
-
-    x.courses[0].add_student(x.students[0])
-
-    #student(x.students[0])
-
-    #x.add_course(Course("A",datetime.datetime.now(datetime.UTC),datetime.datetime.now(datetime.UTC)))
-
+def director(x : Director):
     while True:
 
         print("1. Modifier enseignants")
@@ -192,22 +191,57 @@ def main():
                 print("Cours")
                 cours = reference(x.courses)
 
-
-
                 if cours is not None:
-                    def st_add(lst : List[Student],student : Student):
+                    def st_add(lst: List[Student], student: Student):
                         cours.add_student(student)
 
-                    def st_remove(lst : List[Student], student: Student):
+                    def st_remove(lst: List[Student], student: Student):
                         cours.remove_student(student)
 
-                    asc_modify(x.students, "Elèves", cours.students,st_add,st_remove)
+                    asc_modify(x.students, "Elèves", cours.students, st_add, st_remove)
             case "5":
                 teach = reference(x.teachers)
                 if teach is not None:
                     asc_modify(x.courses, "Cours", teach.courses)
             case "":
                 break
+
+
+def main():
+    x = Director("A", "A", 29, Address(3, "X", "Z"))
+
+    x.add_student(Student("A", "A", 29, Address(3, "X", "Z"), -1))
+
+    x.add_teacher(Teacher("X", "A", 29, Address(3, "X", "Z"), datetime.date.today()))
+
+    x.add_course(Course("F", datetime.date.today(), datetime.date.today(), []))
+
+    x.teachers[0].courses.append(x.courses[0])
+
+    x.courses[0].add_student(x.students[0])
+
+
+
+    while True:
+        print("1. Directeur")
+        print("2. Enseignant")
+        print("3. Eleve")
+
+        match input(""):
+            case "1":
+                director(x)
+            case "2":
+                i = reference(x.teachers)
+                if i is not None:
+                    teacher(i)
+            case "3":
+                i = reference(x.students)
+                if i is not None:
+                    student(i)
+            case "":
+                break
+
+    #x.add_course(Course("A",datetime.datetime.now(datetime.UTC),datetime.datetime.now(datetime.UTC)))
 
 
 main()
