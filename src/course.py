@@ -35,6 +35,21 @@ class Course(Inputable):
 
         return True
 
+    def remove_student(self, student: 'Student'):
+        assert self in student.courses
+        assert student in self.students
+
+        student.courses.remove(self)
+        self.students.remove(student)
+
+    def add_student(self,student : 'Student'):
+        assert self not in student.courses
+        assert student not in self.students
+
+        student.courses.append(self)
+        self.students.append(student)
+
+
     def input_course_details(self) -> str:
         """
         Prompts the user to input the course details and returns a formatted string.

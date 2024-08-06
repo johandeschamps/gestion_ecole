@@ -15,7 +15,7 @@ from src.teacher import Teacher
 T = TypeVar('T', bound='Inputable')
 
 
-def asc_modify(list: List[T], header: str, other: List[T]):
+def asc_modify(list: List[T], header: str, other: List[T],add: Optional[Callable[[List[T], T], None]] = None,remove: Optional[Callable[[List[T], T], None]] = None):
     """
 
     :param list: List to choose from
@@ -40,10 +40,16 @@ def asc_modify(list: List[T], header: str, other: List[T]):
             if a in other:
                 print("Déjà présent")
             else:
-                other.append(a)
+                if add is not None:
+                    add(other,a)
+                else:
+                    other.append(a)
         elif e.startswith("d"):
             l = int(e[1:])
-            del other[l]
+            if remove is None:
+                del other[l]
+            else:
+                remove(other,other[l])
         else:
             break
 
@@ -97,8 +103,63 @@ def list_manage(list: List[T], name, base: T, onAdd: Optional[Callable[[List[T],
             break
 
 
+def student(st: Student):
+    while True:
+        print("1. Consulter notes")
+        print("2. Consulter cours")
+
+        n = input("")
+
+        match n:
+            case "1":
+                cours = reference(st.courses)
+                if cours is not None:
+                    print("Note (0 = non remplit)", st.get_note(cours))
+            case "2":
+                for x in st.courses:
+                    print(x)
+
+
+def teacher(teacher: Teacher):
+    while True:
+        print("1. Editer cours")
+        print("2. Consulter notes")
+        print("3. Modifier notes")
+
+        n = input("")
+        match n:
+            case "1":
+                cours = reference(teacher.courses)
+                if cours is not None:
+                    cours.user_input()
+            case "2":
+                cours = reference(teacher.courses)
+                if cours is not None:
+                    for s in cours.students:
+                        print("Note de", s.first_name, s.last_name, s.get_note(cours).note)
+            case "3":
+                cours = reference(teacher.courses)
+                if cours is not None:
+                    eleve = reference(cours.students)
+                    if eleve is not None:
+                        note = eleve.get_note(cours)
+                        note.user_input()
+
+
 def main():
     x = Director("A", "A", 29, Address(3, "X", "Z"))
+
+    x.add_student(Student("A", "A", 29, Address(3, "X", "Z"), -1))
+
+    x.add_teacher(Teacher("X", "A", 29, Address(3, "X", "Z"), datetime.date.today()))
+
+    x.add_course(Course("F", datetime.date.today(), datetime.date.today(), []))
+
+    x.teachers[0].courses.append(x.courses[0])
+
+    x.courses[0].add_student(x.students[0])
+
+    #student(x.students[0])
 
     #x.add_course(Course("A",datetime.datetime.now(datetime.UTC),datetime.datetime.now(datetime.UTC)))
 
@@ -130,8 +191,17 @@ def main():
             case "4":
                 print("Cours")
                 cours = reference(x.courses)
+
+
+
                 if cours is not None:
-                    asc_modify(x.students, "Elèves", cours.students)
+                    def st_add(lst : List[Student],student : Student):
+                        cours.add_student(student)
+
+                    def st_remove(lst : List[Student], student: Student):
+                        cours.remove_student(student)
+
+                    asc_modify(x.students, "Elèves", cours.students,st_add,st_remove)
             case "5":
                 teach = reference(x.teachers)
                 if teach is not None:
