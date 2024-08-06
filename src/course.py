@@ -1,3 +1,4 @@
+import typing
 from dataclasses import dataclass
 from datetime import datetime, date
 from typing import List
@@ -5,6 +6,8 @@ from typing import List
 from src.inputable import Inputable
 from src import inputs
 
+if typing.TYPE_CHECKING:
+    from src.student import Student
 
 @dataclass
 class Course(Inputable):
