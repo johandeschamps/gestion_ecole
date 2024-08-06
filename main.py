@@ -57,7 +57,7 @@ def asc_modify(list: List[T], header: str, other: List[T],add: Optional[Callable
             break
 
 
-def reference(list: List[T]) -> Optional[T]:
+def reference(list: List[T],prompt : Optional[str] = None) -> Optional[T]:
     """
     Ask the user an element in the list
     :param list: list to choose from
@@ -67,7 +67,7 @@ def reference(list: List[T]) -> Optional[T]:
         for ps, x in enumerate(list):
             print(ps, "-", str(x))
         print()
-        e = input("Sélectionnez :").lower().strip().replace(" ", "")
+        e = input("Sélectionnez :" if prompt is None else prompt).lower().strip().replace(" ", "")
         if e == "":
             return None
         return list[int(e)]
@@ -210,11 +210,11 @@ def director(x : Director):
 def main():
     x = Director("A", "A", 29, Address(3, "X", "Z"))
 
-    x.add_student(Student("A", "A", 29, Address(3, "X", "Z"), -1))
+    x.add_student(Student("Aabb", "A", 29, Address(3, "X", "Z"), -1))
 
-    x.add_teacher(Teacher("X", "A", 29, Address(3, "X", "Z"), datetime.date.today()))
+    x.add_teacher(Teacher("Xx", "A", 29, Address(3, "X", "Z"), datetime.date.today()))
 
-    x.add_course(Course("F", datetime.date.today(), datetime.date.today(), []))
+    x.add_course(Course("Pyromanie", datetime.date.today(), datetime.date.today(), []))
 
     x.teachers[0].courses.append(x.courses[0])
 
@@ -231,11 +231,11 @@ def main():
             case "1":
                 director(x)
             case "2":
-                i = reference(x.teachers)
+                i = reference(x.teachers,"Sélectionnez le professeur")
                 if i is not None:
                     teacher(i)
             case "3":
-                i = reference(x.students)
+                i = reference(x.students,"Sélectionnez l'étudiants")
                 if i is not None:
                     student(i)
             case "":
