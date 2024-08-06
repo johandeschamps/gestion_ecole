@@ -1,10 +1,10 @@
 from typing import List, Dict
 from dataclasses import dataclass, field
-from person import Person
-from student import Student
-from teacher import Teacher
-from course import Course
-from address import Address
+from src.person import Person
+from src.student import Student
+from src.teacher import Teacher
+from src.course import Course
+from src.address import Address
 
 
 @dataclass

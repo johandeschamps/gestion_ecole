@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from datetime import datetime, date
 from typing import List
 
-from inputable import Inputable
+from src.inputable import Inputable
 from src import inputs
 
 

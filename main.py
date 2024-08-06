@@ -32,7 +32,7 @@ def asc_modify(list: List[T], header: str, other: List[T]):
 
         print()
 
-        e = input("Action (a ajouter, dN supprimer N) :").lower().strip().replace(" ", "")
+        e = input("Action (aN ajouter, dN supprimer N) :").lower().strip().replace(" ", "")
 
         if e.startswith("a"):
             e = e[1:]
@@ -62,6 +62,7 @@ def reference(list: List[T]) -> Optional[T]:
         if e == "":
             return None
         return list[int(e)]
+
 
 def list_manage(list: List[T], name, base: T, onAdd: Optional[Callable[[List[T], T], None]] = None):
     """
@@ -99,7 +100,6 @@ def list_manage(list: List[T], name, base: T, onAdd: Optional[Callable[[List[T],
 def main():
     x = Director("A", "A", 29, Address(3, "X", "Z"))
 
-
     #x.add_course(Course("A",datetime.datetime.now(datetime.UTC),datetime.datetime.now(datetime.UTC)))
 
     while True:
@@ -114,29 +114,30 @@ def main():
 
         match inp:
             case "1":
-                list_manage(x.teachers, "Enseignants", Teacher("", "", 0, Address(0, "", ""),datetime.datetime.min))
+                list_manage(x.teachers, "Enseignants", Teacher("", "", 0, Address(0, "", ""), datetime.datetime.min))
             case "2":
-                def st_callback(list : List[Student],std : Student):
+                def st_callback(list: List[Student], std: Student):
                     i = 0
                     for x in list:
-                        i = max(i,x.id)
+                        i = max(i, x.id)
                     i += 1
                     std.id = i
 
-                list_manage(x.students, "Eleves", Student("", "", 0, Address(0, "", ""),0),st_callback)
+                list_manage(x.students, "Eleves", Student("", "", 0, Address(0, "", ""), 0), st_callback)
 
             case "3":
-                list_manage(x.courses, "Cours", Course("", datetime.datetime.min, datetime.datetime.min,[]))
+                list_manage(x.courses, "Cours", Course("", datetime.datetime.min, datetime.datetime.min, []))
             case "4":
                 print("Cours")
                 cours = reference(x.courses)
                 if cours is not None:
-                    asc_modify(x.students,"Elèves",cours.students)
+                    asc_modify(x.students, "Elèves", cours.students)
             case "5":
                 teach = reference(x.teachers)
                 if teach is not None:
-                    asc_modify(x.courses,"Cours",teach.courses)
+                    asc_modify(x.courses, "Cours", teach.courses)
             case "":
                 break
+
 
 main()
