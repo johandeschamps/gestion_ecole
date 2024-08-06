@@ -16,7 +16,12 @@ T = TypeVar('T', bound='Inputable')
 
 
 def asc_modify(list: List[T], header: str, other: List[T]):
+    """
 
+    :param list: List to choose from
+    :param header: List's header
+    :param other: List to modify
+    """
     while True:
         print(header)
         for l, x in enumerate(list):
@@ -44,6 +49,11 @@ def asc_modify(list: List[T], header: str, other: List[T]):
 
 
 def reference(list: List[T]) -> Optional[T]:
+    """
+    Ask the user an element in the list
+    :param list: list to choose from
+    :return: element
+    """
     while True:
         for ps, x in enumerate(list):
             print(ps, "-", str(x))
@@ -54,6 +64,14 @@ def reference(list: List[T]) -> Optional[T]:
         return list[int(e)]
 
 def list_manage(list: List[T], name, base: T, onAdd: Optional[Callable[[List[T], T], None]] = None):
+    """
+    Allow the user to add and remove element from the list
+    :param list:
+    :param name: unused
+    :param base: dummy instance
+    :param onAdd: callback when an element is added
+    :return:
+    """
     cn = True
 
     while cn:
