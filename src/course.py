@@ -76,7 +76,7 @@ class Course(Inputable):
         date : date
             The date to check against the course's begin and end dates.
         """
-        if self.begin_date < date < self.end_date:
+        if self.begin_date <= date <= self.end_date:
             print("This course is active")
         else:
             print("The course is already finished or has not started yet")
