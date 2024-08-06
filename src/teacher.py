@@ -17,8 +17,13 @@ class Teacher(Person):
 
     teachers: typing.ClassVar[List[typing.Self]] = []
 
-    def get_course(self, name: str) -> Course:
-        ...
+    def get_course(self, name: str) -> typing.Optional[Course]:
+        for i in self.courses:
+            if i.name.lower().strip() == name.lower().strip():
+                return i
+
+        return None
+
 
     def user_input(self) -> bool:
         super().user_input()

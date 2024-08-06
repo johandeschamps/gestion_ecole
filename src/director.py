@@ -1,3 +1,4 @@
+import datetime
 from typing import List, Dict
 from dataclasses import dataclass, field
 from src.person import Person
@@ -71,7 +72,7 @@ class Director(Person):
         if course not in self.courses:
             self.courses.append(course)
 
-    def modify_course(self, course: Course, name: str, start_date: str, end_date: str):
+    def modify_course(self, course: Course, name: str, start_date: datetime.date, end_date: datetime.date):
         """
         Modifies the details of a registered course.
 
@@ -88,13 +89,13 @@ class Director(Person):
             if name:
                 course.name = name
             if start_date:
-                course.start_date = start_date
+                course.begin_date = start_date
             if end_date:
                 course.end_date = end_date
         else:
             raise ValueError("This course is not registered.")
 
-    def extend_course_date(self, course: Course, new_end_date: str):
+    def extend_course_date(self, course: Course, new_end_date: datetime.date):
         """
         Extends the end date of a registered course.
 
@@ -170,7 +171,7 @@ class Director(Person):
         else:
             raise ValueError("This teacher is not in the list.")
 
-    def modify_student_info(self, student: Student, first_name: str, last_name: str, age: int, address: str):
+    def modify_student_info(self, student: Student, first_name: str, last_name: str, age: int, address: Address):
         """
         Modifies the information of a registered student.
 
@@ -197,7 +198,7 @@ class Director(Person):
             raise ValueError("This student is not registered.")
 
     def modify_teacher_info(self, teacher: Teacher, first_name: str, last_name: str, age: int, address: Address,
-                            entry_date: str):
+                            entry_date: datetime.date):
         """
         Modifies the information of a registered teacher.
 

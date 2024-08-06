@@ -125,8 +125,10 @@ def student(st: Student):
             case "3":
                 date = inputs.date("Date : ")
                 for v in st.courses:
-                    if v.begin_date <= date <= v.end_date:
-                        print(v)
+                    print(v)
+                    v.current_course(date)
+                    print()
+
             case "":
                 break
 
