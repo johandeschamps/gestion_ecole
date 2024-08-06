@@ -1,9 +1,9 @@
 from dataclasses import dataclass
-from datetime import datetime
+from datetime import datetime, date
 from typing import List
 
-from gestion_ecole.src.student import Student
 from inputable import Inputable
+from src import inputs
 
 
 @dataclass
@@ -15,15 +15,22 @@ class Course(Inputable):
     ----------
     name : str
         The name of the course.
-    begin_date : datetime
+    begin_date : date
         The start date of the course.
-    end_date : datetime
+    end_date : date
         The end date of the course.
     """
     name: str
-    begin_date: datetime
-    end_date: datetime
-    students: List[Student]
+    begin_date: date
+    end_date: date
+    students: List['Student']
+
+    def user_input(self) -> bool:
+        self.name = input("Nom : ")
+        self.begin_date = inputs.date("Date de commencement : ")
+        self.end_date = inputs.date("Date de fin : ")
+
+        return True
 
     def input_course_details(self) -> str:
         """
@@ -42,13 +49,13 @@ class Course(Inputable):
 
         return f"Course: {self.name}, Begin date: {self.begin_date}, End date: {self.end_date}"
 
-    def current_course(self, date: datetime) -> None:
+    def current_course(self, date: date) -> None:
         """
         Checks if the course is active on the given date.
 
         Parameters
         ----------
-        date : datetime
+        date : date
             The date to check against the course's begin and end dates.
         """
         if self.begin_date < date < self.end_date:
