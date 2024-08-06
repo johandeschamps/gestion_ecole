@@ -1,14 +1,12 @@
 from dataclasses import dataclass
 
-from src.course import Course
 from src.inputable import Inputable
-from src.student import Student
 
 
 @dataclass
 class Note(Inputable):
-    student: Student
-    course: Course
+    student: 'Student'
+    course: 'Course'
     note: float
 
     def update_grade(self, new_note):
