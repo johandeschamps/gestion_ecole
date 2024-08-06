@@ -15,3 +15,6 @@ class Address(Inputable):
         self.street_name = input("Street name: ")
 
         return True
+
+    def __str__(self):
+        return f"{self.street_name},Ville: {self.city}, Code postal : {self.postal_code}"

@@ -28,3 +28,4 @@ class Teacher(Person):
         super().user_input()
         self.entry_date = inputs.date("Date d'entrée : ")#datetime.date.fromisoformat(input("Entry date (YYYY-MM-DD) : "))
         return True
+
