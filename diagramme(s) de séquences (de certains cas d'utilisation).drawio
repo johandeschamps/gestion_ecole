@@ -335,6 +335,9 @@
         <mxCell id="CrLBbL69Shos_XjduU1m-5" value="assigne le cours to a teacher" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="400" y="308" width="180" height="30" as="geometry" />
         </mxCell>
+        <mxCell id="CrLBbL69Shos_XjduU1m-7" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=strokeColor;" vertex="1" parent="1">
+          <mxGeometry x="587.5" y="440" width="5" height="20" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
