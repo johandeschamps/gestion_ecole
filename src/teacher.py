@@ -15,7 +15,6 @@ class Teacher(Person):
     entry_date: datetime.date
     courses: List[Course] = field(default_factory=list)
 
-    teachers: typing.ClassVar[List[typing.Self]] = []
 
     def get_course(self, name: str) -> typing.Optional[Course]:
         for i in self.courses:
