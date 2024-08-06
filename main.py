@@ -134,22 +134,17 @@ def student(st: Student):
 
 def teacher(teacher: Teacher):
     while True:
-        print("1. Editer cours")
-        print("2. Consulter notes")
-        print("3. Modifier notes")
+        print("1. Consulter notes")
+        print("2. Modifier notes")
 
         n = input("")
         match n:
             case "1":
                 cours = reference(teacher.courses)
                 if cours is not None:
-                    cours.user_input()
-            case "2":
-                cours = reference(teacher.courses)
-                if cours is not None:
                     for s in cours.students:
                         print("Note de", s.first_name, s.last_name, s.get_note(cours).note)
-            case "3":
+            case "2":
                 cours = reference(teacher.courses)
                 if cours is not None:
                     eleve = reference(cours.students)
