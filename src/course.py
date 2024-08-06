@@ -59,13 +59,13 @@ class Course(Inputable):
         str
             A string containing the course name, begin date, and end date.
         """
-        self.name = input("Name of course: ")
-        begin_date_str = input("Begin date of course (YYYY-MM-DD): ")
-        end_date_str = input("End date of course (YYYY-MM-DD): ")
+        self.name = input("Nom de cours : ")
+        begin_date_str = input("Date de commencement du cours(YYYY-MM-DD): ")
+        end_date_str = input("Date de fin du cours: (YYYY-MM-DD): ")
         self.begin_date = datetime.strptime(begin_date_str, "%Y-%m-%d")
         self.end_date = datetime.strptime(end_date_str, "%Y-%m-%d")
 
-        return f"Course: {self.name}, Begin date: {self.begin_date}, End date: {self.end_date}"
+        return f"Cours: {self.name}, date de commencement: {self.begin_date},  date de fini: {self.end_date}"
 
     def current_course(self, date: date) -> None:
         """
@@ -77,6 +77,6 @@ class Course(Inputable):
             The date to check against the course's begin and end dates.
         """
         if self.begin_date <= date <= self.end_date:
-            print("This course is active")
+            print("ce cours a commençé")
         else:
-            print("The course is already finished or has not started yet")
+            print("ce cours est fini ou il n'a pas encore commençé")

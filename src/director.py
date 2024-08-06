@@ -62,13 +62,13 @@ class Director(Person):
                         or if the course is already assigned to the teacher.
         """
         if teacher not in self.teachers:
-            raise ValueError("The teacher is not registered.")
+            raise ValueError("L'enseignant n'est pas enregistré..")
         if course not in self.courses:
-            raise ValueError("The course is not registered.")
+            raise ValueError("le cours n'est pas enregistré.")
         if course not in teacher.courses:
             teacher.courses.append(course)
         else:
-            raise ValueError("The course is already assigned to this teacher.")
+            raise ValueError("le cours a déjà été assigné à l'enseignant")
         if course not in self.courses:
             self.courses.append(course)
 
@@ -93,7 +93,7 @@ class Director(Person):
             if end_date:
                 course.end_date = end_date
         else:
-            raise ValueError("This course is not registered.")
+            raise ValueError("ce cours n'est pas enregistré.")
 
     def extend_course_date(self, course: Course, new_end_date: datetime.date):
         """
@@ -109,7 +109,7 @@ class Director(Person):
         if course in self.courses:
             course.end_date = new_end_date
         else:
-            raise ValueError("This course is not registered.")
+            raise ValueError("ce cours n'est pas enregistré.")
 
     def add_student(self, student: Student):
         """
@@ -124,7 +124,7 @@ class Director(Person):
         if student not in self.students:
             self.students.append(student)
         else:
-            raise ValueError("This student is already registered.")
+            raise ValueError("lélève a déjà été  enregistré")
 
     def remove_student(self, student):
         """
@@ -139,7 +139,7 @@ class Director(Person):
         if student in self.students:
             self.students.remove(student)
         else:
-            raise ValueError("This student is not in the list.")
+            raise ValueError("l'élève n'est pas dans la liste")
 
     def add_teacher(self, teacher: Teacher):
         """
@@ -154,7 +154,7 @@ class Director(Person):
         if teacher not in self.teachers:
             self.teachers.append(teacher)
         else:
-            raise ValueError("This teacher is already registered.")
+            raise ValueError("L'enseignant e déjà été enregistré.")
 
     def remove_teacher(self, teacher: Teacher):
         """
@@ -169,7 +169,7 @@ class Director(Person):
         if teacher in self.teachers:
             self.teachers.remove(teacher)
         else:
-            raise ValueError("This teacher is not in the list.")
+            raise ValueError("L'enseignant n'est pas dans la list.")
 
     def modify_student_info(self, student: Student, first_name: str, last_name: str, age: int, address: Address):
         """
@@ -195,7 +195,7 @@ class Director(Person):
             if address:
                 student.address = address
         else:
-            raise ValueError("This student is not registered.")
+            raise ValueError("L'élève n'est pas enregistré.")
 
     def modify_teacher_info(self, teacher: Teacher, first_name: str, last_name: str, age: int, address: Address,
                             entry_date: datetime.date):
@@ -225,7 +225,7 @@ class Director(Person):
             if entry_date:
                 teacher.entry_date = entry_date
         else:
-            raise ValueError("This teacher is not registered.")
+            raise ValueError("L'enseignant n'est pas enregistré.")
 
     def add_course(self, course: Course):
         """
@@ -240,7 +240,7 @@ class Director(Person):
         if course not in self.courses:
             self.courses.append(course)
         else:
-            raise ValueError("This course already exists.")
+            raise ValueError("ce cours a été déjà enregistré")
 
     def course_with_teacher(self) -> Dict[str, Dict[str, List[str]]]:
         """
