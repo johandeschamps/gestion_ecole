@@ -12,6 +12,8 @@ class Student(Person):
     id: int
     courses: List[Course] = field(default_factory=lambda: [])
 
+    notes : List[Note] = field(default_factory=lambda: [])
+
     def user_input(self) -> bool:
         super().user_input()
 
@@ -20,7 +22,15 @@ class Student(Person):
         return True
 
     def get_note(self, course: Course) -> Note:
-        ...
+        for ia in self.notes:
+            if ia.course == course:
+                return ia
+
+        x = Note(self,course,-0)
+        self.notes.append(x)
+        return x
+
+
 
     def get_course(self, name: str) -> Course:
         ...
