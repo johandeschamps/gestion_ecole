@@ -89,7 +89,8 @@ def director_menu(director: Director):
         print("3. Éditer cours")
         print("4. Assigner élèves au cours")
         print("5. Assigner cours à l'enseignants ")
-        print("6. Quitter")
+        print("6. Vue d'ensemble des cours")
+        print("7. Quitter")
 
         choice = input("Choisissez une option: ").strip()
 
@@ -127,6 +128,9 @@ def director_menu(director: Director):
 
                     modify_selected_list(director.courses, "Cours", teacher.courses, validate_course)
             case "6":
+                for a,f in director.course_with_teacher().items():
+                    print(f"{a} - {f}")
+            case "7":
                 break
             case _:
                 print("Option non reconnue.")
