@@ -1,7 +1,7 @@
 import copy
 from typing import List, Optional, Callable, TypeVar
 
-T = TypeVar('T',bound="Inputable")
+T = TypeVar('T', bound="Inputable")
 
 
 def modify_list(

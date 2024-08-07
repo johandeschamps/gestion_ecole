@@ -1,6 +1,6 @@
 from datetime import date
 
-from menu import director_menu,teacher_menu,student_menu
+from menu import director_menu, teacher_menu, student_menu
 # main.py
 
 from datetime import date

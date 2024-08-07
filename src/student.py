@@ -22,6 +22,10 @@ class Student(Person):
         return True
 
     def get_note(self, course: Course) -> Note:
+        """Get the student note for a course or create an empty one if none exists"""
+        if self not in course.students:
+            raise KeyError("Student not part of this course")
+
         for note in self.notes:
             if note.course == course:
                 return note

@@ -23,8 +23,7 @@ class Teacher(Person):
 
     def user_input(self) -> bool:
         super().user_input()
-        self.entry_date = inputs.date(
-            "Date d'entrée : ")  #datetime.date.fromisoformat(input("Entry date (YYYY-MM-DD) : "))
+        self.entry_date = inputs.date("Date d'entrée : ")
         return True
 
     def __str__(self):
