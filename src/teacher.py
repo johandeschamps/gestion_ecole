@@ -15,7 +15,6 @@ class Teacher(Person):
     entry_date: datetime.date
     courses: List[Course] = field(default_factory=list)
 
-
     def get_course(self, name: str) -> typing.Optional[Course]:
         for i in self.courses:
             if i.name.lower().strip() == name.lower().strip():
@@ -23,9 +22,11 @@ class Teacher(Person):
 
         return None
 
-
     def user_input(self) -> bool:
         super().user_input()
-        self.entry_date = inputs.date("Date d'entrée : ")#datetime.date.fromisoformat(input("Entry date (YYYY-MM-DD) : "))
+        self.entry_date = inputs.date(
+            "Date d'entrée : ")  #datetime.date.fromisoformat(input("Entry date (YYYY-MM-DD) : "))
         return True
 
+    def __str__(self):
+        return super().__str__() + f",Date d'entrée {self.entry_date}"

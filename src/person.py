@@ -20,3 +20,6 @@ class Person(Inputable):
         self.address.user_input()
         print("-")
         return True
+
+    def __str__(self):
+        return f"Nom : {self.first_name}, Prénom : {self.last_name}, Age : {self.age}, Adresse : {{{self.address}}}"
