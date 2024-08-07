@@ -22,19 +22,18 @@ class Student(Person):
         return True
 
     def get_note(self, course: Course) -> Note:
-        for ia in self.notes:
-            if ia.course == course:
-                return ia
+        for note in self.notes:
+            if note.course == course:
+                return note
 
-        x = Note(self, course, -0)
-        self.notes.append(x)
-        return x
+        new_note = Note(self, course, 0)
+        self.notes.append(new_note)
+        return new_note
 
     def get_course(self, name: str) -> Optional[Course]:
-        for i in self.courses:
-            if i.name.lower().strip() == name.lower().strip():
-                return i
-
+        for course in self.courses:
+            if course.name.lower().strip() == name.lower().strip():
+                return course
         return None
 
     def __str__(self):

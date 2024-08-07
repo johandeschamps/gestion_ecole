@@ -9,6 +9,7 @@ from src import inputs
 if typing.TYPE_CHECKING:
     from src.student import Student
 
+
 @dataclass
 class Course(Inputable):
     """
@@ -42,13 +43,12 @@ class Course(Inputable):
         student.courses.remove(self)
         self.students.remove(student)
 
-    def add_student(self,student : 'Student'):
+    def add_student(self, student: 'Student'):
         assert self not in student.courses
         assert student not in self.students
 
         student.courses.append(self)
         self.students.append(student)
-
 
     def input_course_details(self) -> str:
         """

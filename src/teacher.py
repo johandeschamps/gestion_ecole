@@ -16,10 +16,9 @@ class Teacher(Person):
     courses: List[Course] = field(default_factory=list)
 
     def get_course(self, name: str) -> typing.Optional[Course]:
-        for i in self.courses:
-            if i.name.lower().strip() == name.lower().strip():
-                return i
-
+        for course in self.courses:
+            if course.name.lower().strip() == name.lower().strip():
+                return course
         return None
 
     def user_input(self) -> bool:
