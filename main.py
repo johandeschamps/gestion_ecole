@@ -60,6 +60,9 @@ def main():
     student1.notes.append(Note(student=student1, course=course1, note=16.5))
     student2.notes.append(Note(student=student2, course=course2, note=14.0))
 
+    course1.add_student(student1)
+    course2.add_student(student2)
+
     while True:
         print("\nChoisissez un type d'utilisateur pour tester :")
         print("1. Étudiant")
