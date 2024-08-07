@@ -52,8 +52,9 @@ def teacher_menu(teacher: Teacher):
     while True:
         print("1. Voir cours")
         print("2. Consulter notes")
-        print("3. Modifier notes")
-        print("4. Quitter")
+        print("3. Voir étudiants")
+        print("4. Modifier notes")
+        print("5. Quitter")
 
         choice = input("Choisissez une option: ").strip()
 
@@ -67,13 +68,19 @@ def teacher_menu(teacher: Teacher):
                     for student in course.students:
                         print("Note de", student.first_name, student.last_name, student.get_note(course).note)
             case "3":
+                course = select_element_from_list(teacher.courses, "Choisissez un cours pour consulter les élèves: ")
+                if course is not None:
+                    for student in course.students:
+                        print(student.first_name, student.last_name)
+
+            case "4":
                 course = select_element_from_list(teacher.courses, "Choisissez un cours pour modifier les notes: ")
                 if course is not None:
                     student = select_element_from_list(course.students, "Choisissez un élève: ")
                     if student is not None:
                         note = student.get_note(course)
                         note.user_input()
-            case "4":
+            case "5":
                 break
             case _:
                 print("Option non reconnue.")
