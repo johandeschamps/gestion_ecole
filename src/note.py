@@ -30,4 +30,4 @@ class Note(Inputable):
         }
 
     def __str__(self):
-        return f"Note(Student ID: {self.student.id}, Course Name: {self.course.name}, Grade: {self.note})"
+        return f"Note(Id étudiant: {self.student.id}, Nom cours: {self.course.name}, Note: {self.note})"
