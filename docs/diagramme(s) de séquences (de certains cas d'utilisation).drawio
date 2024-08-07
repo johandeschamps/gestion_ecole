@@ -413,7 +413,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="BrGFGS4DlvZJD8hUbCFJ-18" value="afficher les results" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="220" y="925" width="120" height="30" as="geometry" />
+          <mxGeometry x="242.5" y="950" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="BrGFGS4DlvZJD8hUbCFJ-20" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="OpkuWLpWqErTyJCGgItU-1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -613,7 +613,7 @@
           <mxGeometry x="410" y="770" width="5" height="50" as="geometry" />
         </mxCell>
         <mxCell id="BrGFGS4DlvZJD8hUbCFJ-67" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=strokeColor;" vertex="1" parent="1">
-          <mxGeometry x="410" y="900" width="5" height="80" as="geometry" />
+          <mxGeometry x="410" y="900" width="5" height="70" as="geometry" />
         </mxCell>
         <mxCell id="BrGFGS4DlvZJD8hUbCFJ-68" value="aller cherche cours" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="600" y="888" width="120" height="30" as="geometry" />
