@@ -80,7 +80,7 @@ def director_menu(director: Director):
         print("2. Modifier élèves")
         print("3. Éditer cours")
         print("4. Assigner élèves au cours")
-        print("5. Assigner cours")
+        print("5. Assigner cours à l'enseignants ")
         print("6. Quitter")
 
         choice = input("Choisissez une option: ").strip()
