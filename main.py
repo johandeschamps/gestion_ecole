@@ -40,8 +40,8 @@ def main():
     )
 
     # Création des cours
-    course1 = Course(name="Mathématiques", begin_date=date(2024, 9, 1), end_date=date(2025, 6, 30), students=[student1])
-    course2 = Course(name="Sciences", begin_date=date(2024, 9, 1), end_date=date(2025, 6, 30), students=[student2])
+    course1 = Course(name="Mathématiques", begin_date=date(2024, 9, 1), end_date=date(2025, 6, 30), students=[])
+    course2 = Course(name="Sciences", begin_date=date(2024, 9, 1), end_date=date(2025, 6, 30), students=[])
 
     # Assignation des cours aux enseignants
     teacher1.courses.append(course1)
