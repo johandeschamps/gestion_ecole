@@ -15,6 +15,7 @@ T = TypeVar('T', bound='Inputable')
 
 
 def student_menu(student: Student):
+    """Display the student's menu"""
     print(f"\nMenu pour {student.first_name} {student.last_name} !")
     while True:
         print("1. Consulter notes")
@@ -45,6 +46,8 @@ def student_menu(student: Student):
 
 
 def teacher_menu(teacher: Teacher):
+    """Display the teacher's menu"""
+
     print(f"\nMenu pour {teacher.first_name} {teacher.last_name} !")
     while True:
         print("1. Voir cours")
@@ -77,6 +80,8 @@ def teacher_menu(teacher: Teacher):
 
 
 def director_menu(director: Director):
+    """Display the director's menu"""
+
     print(f"\n Menu pour {director.first_name} {director.last_name} !")
     while True:
         print("1. Modifier enseignants")
