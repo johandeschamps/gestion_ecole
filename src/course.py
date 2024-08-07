@@ -29,6 +29,9 @@ class Course(Inputable):
     end_date: date
     students: List['Student']
 
+    def __str__(self):
+        return f"Nom du cours: {self.name}, Date de début: {self.begin_date}, Date de fin: {self.end_date}"
+
     def user_input(self) -> bool:
         self.name = input("Nom : ")
         self.begin_date = inputs.date("Date de commencement : ")
