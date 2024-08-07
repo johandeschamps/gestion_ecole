@@ -13,10 +13,10 @@ class Person(Inputable):
     address: Address
 
     def user_input(self) -> bool:
-        self.first_name = input("First name: ")
-        self.last_name = input("Last name: ")
+        self.first_name = input("Nom: ")
+        self.last_name = input("Prénom: ")
         self.age = int(input("Age: "))
-        print("# Address :")
+        print("# Adresse :")
         self.address.user_input()
         print("-")
         return True
