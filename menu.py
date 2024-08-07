@@ -1,13 +1,15 @@
-
+import datetime
 from typing import List, TypeVar
 
 from src import inputs
+from src.address import Address
+from src.course import Course
 
 from src.director import Director
 
 from src.student import Student
 from src.teacher import Teacher
-from list_utils import select_element_from_list, modify_list
+from list_utils import select_element_from_list, modify_list, modify_selected_list
 
 T = TypeVar('T', bound='Inputable')
 
@@ -85,14 +87,14 @@ def director_menu(director: Director):
 
         match choice:
             case "1":
-                modify_list(director.teachers, "Enseignants", director.teachers)
+                modify_list(director.teachers, "Enseignants",Teacher("","",0,Address(2,"",""),datetime.date.min))
             case "2":
                 def student_callback(student_list: List[Student], student: Student):
                     student.id = max((s.id for s in student_list), default=0) + 1
 
-                modify_list(director.students, "Élèves", director.students, add_function=student_callback)
+                modify_list(director.students, "Élèves", Student("","",0,Address(2,"",""),77), add_function=student_callback)
             case "3":
-                modify_list(director.courses, "Cours", director.courses)
+                modify_list(director.courses, "Cours", Course("",datetime.date.min,datetime.date.min,[]))
             case "4":
                 course = select_element_from_list(director.courses, "Choisissez un cours pour modifier les élèves: ")
                 if course is not None:
@@ -102,11 +104,11 @@ def director_menu(director: Director):
                     def student_remove(lst: List[Student], student: Student):
                         course.remove_student(student)
 
-                    modify_list(director.students, "Élèves", course.students, add_function=student_add, remove_function=student_remove)
+                    modify_selected_list(director.students, "Élèves", course.students, add_function=student_add, remove_function=student_remove)
             case "5":
                 teacher = select_element_from_list(director.teachers, "Choisissez un enseignant pour assigner des cours: ")
                 if teacher is not None:
-                    modify_list(director.courses, "Cours", teacher.courses)
+                    modify_selected_list(director.courses, "Cours", teacher.courses)
             case "6":
                 break
             case _:

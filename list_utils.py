@@ -1,9 +1,60 @@
+import copy
 from typing import List, Optional, Callable, TypeVar
 
-T = TypeVar('T')
+T = TypeVar('T',bound="Inputable")
 
 
 def modify_list(
+        items: List[T],
+        header: str,
+        dummy: T,
+        add_function: Optional[Callable[[List[T], T], None]] = None,
+        remove_function: Optional[Callable[[List[T], T], None]] = None
+):
+    """
+    Fonction pour ajouter ou supprimer des éléments d'une liste avec les élément d'une autre liste
+
+    :param items: Liste d'éléments disponibles pour modification
+    :param header: En-tête affiché pour la liste des éléments
+    :param dummy: Element de base
+    :param add_function: Fonction appelée pour ajouter un élément
+    :param remove_function: Fonction appelée pour supprimer un élément
+    """
+    while True:
+        print(header)
+        for index, item in enumerate(items):
+            print(f"{index} - {item}")
+
+        action = input("Action (a ajouter, dN supprimer N, q quitter) : ").lower().strip()
+
+        if action.startswith("a"):
+            ins = copy.deepcopy(dummy)
+            ins.user_input()
+
+            if add_function:
+                add_function(items, ins)
+            else:
+                items.append(ins)
+
+        elif action.startswith("d"):
+            index = int(action[1:])
+            if index < 0 or index >= len(items):
+                print("Index invalide")
+                continue
+            item_to_remove = items[index]
+            if remove_function:
+                remove_function(items, item_to_remove)
+            else:
+                del items[index]
+
+        elif action == "q":
+            break
+
+        else:
+            print("Action non reconnue.")
+
+
+def modify_selected_list(
         items: List[T],
         header: str,
         selected_items: List[T],
@@ -11,7 +62,7 @@ def modify_list(
         remove_function: Optional[Callable[[List[T], T], None]] = None
 ):
     """
-    Fonction pour ajouter ou supprimer des éléments d'une liste.
+    Fonction pour ajouter ou supprimer des éléments d'une liste avec les éléments d'une autre liste
 
     :param items: Liste d'éléments disponibles pour modification
     :param header: En-tête affiché pour la liste des éléments
