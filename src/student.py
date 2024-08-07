@@ -17,7 +17,7 @@ class Student(Person):
     def user_input(self) -> bool:
         super().user_input()
 
-        self.id = int(input("Student id: "))
+        self.id = int(input("Id étudiant: "))
 
         return True
 
