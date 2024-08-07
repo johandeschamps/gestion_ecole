@@ -13,6 +13,7 @@ from list_utils import select_element_from_list, modify_list, modify_selected_li
 
 T = TypeVar('T', bound='Inputable')
 
+
 def student_menu(student: Student):
     print(f"\nMenu pour {student.first_name} {student.last_name} !")
     while True:
@@ -41,6 +42,7 @@ def student_menu(student: Student):
                 break
             case _:
                 print("Option non reconnue. Veuillez réessayer.")
+
 
 def teacher_menu(teacher: Teacher):
     print(f"\nMenu pour {teacher.first_name} {teacher.last_name} !")
@@ -73,6 +75,7 @@ def teacher_menu(teacher: Teacher):
             case _:
                 print("Option non reconnue.")
 
+
 def director_menu(director: Director):
     print(f"\n Menu pour {director.first_name} {director.last_name} !")
     while True:
@@ -87,14 +90,15 @@ def director_menu(director: Director):
 
         match choice:
             case "1":
-                modify_list(director.teachers, "Enseignants",Teacher("","",0,Address(2,"",""),datetime.date.min))
+                modify_list(director.teachers, "Enseignants", Teacher("", "", 0, Address(2, "", ""), datetime.date.min))
             case "2":
                 def student_callback(student_list: List[Student], student: Student):
                     student.id = max((s.id for s in student_list), default=0) + 1
 
-                modify_list(director.students, "Élèves", Student("","",0,Address(2,"",""),77), add_function=student_callback)
+                modify_list(director.students, "Élèves", Student("", "", 0, Address(2, "", ""), 77),
+                            add_function=student_callback)
             case "3":
-                modify_list(director.courses, "Cours", Course("",datetime.date.min,datetime.date.min,[]))
+                modify_list(director.courses, "Cours", Course("", datetime.date.min, datetime.date.min, []))
             case "4":
                 course = select_element_from_list(director.courses, "Choisissez un cours pour modifier les élèves: ")
                 if course is not None:
@@ -104,11 +108,19 @@ def director_menu(director: Director):
                     def student_remove(lst: List[Student], student: Student):
                         course.remove_student(student)
 
-                    modify_selected_list(director.students, "Élèves", course.students, add_function=student_add, remove_function=student_remove)
+                    modify_selected_list(director.students, "Élèves", course.students, add_function=student_add,
+                                         remove_function=student_remove)
             case "5":
-                teacher = select_element_from_list(director.teachers, "Choisissez un enseignant pour assigner des cours: ")
+                teacher = select_element_from_list(director.teachers,
+                                                   "Choisissez un enseignant pour assigner des cours: ")
                 if teacher is not None:
-                    modify_selected_list(director.courses, "Cours", teacher.courses)
+                    def validate_course(list: List[Course], cr: Course):
+                        if teacher.entry_date <= cr.begin_date:
+                            list.append(cr)
+                        else:
+                            print("L'enseignant arrive plus tard que le début du cours")
+
+                    modify_selected_list(director.courses, "Cours", teacher.courses, validate_course)
             case "6":
                 break
             case _:
