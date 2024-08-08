@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0" version="24.7.6">
   <diagram name="Page-1" id="DKGAmTH7IYVnLwG2p-rW">
-    <mxGraphModel dx="1348" dy="719" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="3300" math="0" shadow="0">
+    <mxGraphModel dx="955" dy="509" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="3300" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -297,7 +297,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="OpkuWLpWqErTyJCGgItU-55" value="Gérer les information éleves /ensignant&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+        <mxCell id="OpkuWLpWqErTyJCGgItU-55" value="Gérer les informations éleves /ensignant&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="165" y="840" width="240" height="30" as="geometry" />
         </mxCell>
         <mxCell id="OpkuWLpWqErTyJCGgItU-57" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" parent="1" target="OpkuWLpWqErTyJCGgItU-56" edge="1">
@@ -358,13 +358,11 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="BrGFGS4DlvZJD8hUbCFJ-6" value="avoir un les list etudiant&amp;nbsp;" style="endArrow=open;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;dashed=1;labelBackgroundColor=none;rounded=0;entryX=1.5;entryY=0.423;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="OpkuWLpWqErTyJCGgItU-7" target="OpkuWLpWqErTyJCGgItU-56" edge="1">
+        <mxCell id="BrGFGS4DlvZJD8hUbCFJ-6" value="return&amp;nbsp;" style="endArrow=open;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;dashed=1;labelBackgroundColor=none;rounded=0;entryX=1.5;entryY=0.423;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="OpkuWLpWqErTyJCGgItU-7" target="OpkuWLpWqErTyJCGgItU-56" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="760" y="920" as="sourcePoint" />
             <mxPoint x="60" y="860" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="470" y="880" />
-            </Array>
+            <Array as="points" />
           </mxGeometry>
         </mxCell>
         <mxCell id="BrGFGS4DlvZJD8hUbCFJ-7" value="afficher le note" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
