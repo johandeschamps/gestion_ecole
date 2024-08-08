@@ -573,16 +573,6 @@
         <mxCell id="BrGFGS4DlvZJD8hUbCFJ-68" value="aller cherche cours" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="600" y="888" width="120" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="BrGFGS4DlvZJD8hUbCFJ-71" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" parent="1" target="BrGFGS4DlvZJD8hUbCFJ-70" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="230" y="1260" as="sourcePoint" />
-            <mxPoint x="233" y="550" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="230" y="950" />
-              <mxPoint x="233" y="650" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="BrGFGS4DlvZJD8hUbCFJ-70" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=strokeColor;" parent="1" vertex="1">
           <mxGeometry x="227.5" y="1058" width="5" height="122" as="geometry" />
         </mxCell>
