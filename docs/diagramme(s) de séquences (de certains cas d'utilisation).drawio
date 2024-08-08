@@ -36,8 +36,8 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="i1B-f_vfJnyZmSTUSLFz-18" value="add course" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="150" y="210" width="80" height="30" as="geometry" />
+        <mxCell id="i1B-f_vfJnyZmSTUSLFz-18" value="Ajouter cours" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="145" y="210" width="90" height="30" as="geometry" />
         </mxCell>
         <mxCell id="i1B-f_vfJnyZmSTUSLFz-20" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" target="OpkuWLpWqErTyJCGgItU-1" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
