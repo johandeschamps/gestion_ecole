@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36 Edg/127.0.0.0" version="24.7.6">
   <diagram name="Page-1" id="DKGAmTH7IYVnLwG2p-rW">
-    <mxGraphModel dx="1146" dy="611" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="3300" math="0" shadow="0">
+    <mxGraphModel dx="955" dy="509" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2339" pageHeight="3300" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -48,7 +48,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="i1B-f_vfJnyZmSTUSLFz-22" value="afficher le course&amp;nbsp;" style="endArrow=open;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;dashed=1;labelBackgroundColor=none;rounded=0;" parent="1" source="i1B-f_vfJnyZmSTUSLFz-9" edge="1">
+        <mxCell id="i1B-f_vfJnyZmSTUSLFz-22" value="Afficher le cours" style="endArrow=open;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;dashed=1;labelBackgroundColor=none;rounded=0;" parent="1" source="i1B-f_vfJnyZmSTUSLFz-9" edge="1">
           <mxGeometry width="160" relative="1" as="geometry">
             <mxPoint x="592.5" y="250" as="sourcePoint" />
             <mxPoint x="60" y="280" as="targetPoint" />
