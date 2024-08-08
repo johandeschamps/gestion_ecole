@@ -422,7 +422,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="BrGFGS4DlvZJD8hUbCFJ-21" value="enter nom" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="BrGFGS4DlvZJD8hUbCFJ-20" vertex="1" connectable="0">
+        <mxCell id="BrGFGS4DlvZJD8hUbCFJ-21" value="Entrer le nom et prénon" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="BrGFGS4DlvZJD8hUbCFJ-20" vertex="1" connectable="0">
           <mxGeometry x="0.317" y="-1" relative="1" as="geometry">
             <mxPoint x="8" y="-11" as="offset" />
           </mxGeometry>
@@ -465,7 +465,7 @@
             <mxPoint x="560" y="310" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="BrGFGS4DlvZJD8hUbCFJ-35" value="entre le nom" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="BrGFGS4DlvZJD8hUbCFJ-34" vertex="1" connectable="0">
+        <mxCell id="BrGFGS4DlvZJD8hUbCFJ-35" value="Entrer le nom et prénon" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="BrGFGS4DlvZJD8hUbCFJ-34" vertex="1" connectable="0">
           <mxGeometry y="4" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -507,7 +507,7 @@
             <mxPoint x="560" y="1140" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="BrGFGS4DlvZJD8hUbCFJ-42" value="entre name&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="BrGFGS4DlvZJD8hUbCFJ-41" vertex="1" connectable="0">
+        <mxCell id="BrGFGS4DlvZJD8hUbCFJ-42" value="Entrer le nom et prénon" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="BrGFGS4DlvZJD8hUbCFJ-41" vertex="1" connectable="0">
           <mxGeometry x="0.0907" y="4" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
