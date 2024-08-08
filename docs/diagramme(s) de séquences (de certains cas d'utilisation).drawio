@@ -166,7 +166,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="OpkuWLpWqErTyJCGgItU-29" value="consulter a student&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+        <mxCell id="OpkuWLpWqErTyJCGgItU-29" value="consulter un étudiant" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="225" y="478" width="130" height="30" as="geometry" />
         </mxCell>
         <mxCell id="OpkuWLpWqErTyJCGgItU-30" value="return indormations" style="endArrow=open;startArrow=none;endFill=0;startFill=0;endSize=8;html=1;verticalAlign=bottom;dashed=1;labelBackgroundColor=none;rounded=0;" parent="1" edge="1">
@@ -194,7 +194,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="OpkuWLpWqErTyJCGgItU-33" value="recherche un éléves" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="OpkuWLpWqErTyJCGgItU-32" vertex="1" connectable="0">
+        <mxCell id="OpkuWLpWqErTyJCGgItU-33" value="recherche un étudiant" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="OpkuWLpWqErTyJCGgItU-32" vertex="1" connectable="0">
           <mxGeometry x="-0.0066" y="-6" relative="1" as="geometry">
             <mxPoint x="20" y="-36" as="offset" />
           </mxGeometry>
