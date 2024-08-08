@@ -35,3 +35,5 @@ Le School Management System (SMS) est une application conçue pour gérer les in
   - Consulter toutes les adresses pour analyser la répartition géographique.
 
 
+
+[](https://github.com/johandeschamps/gestion_ecole/blob/main/docs/diagramme%20de%20classe.jpg "Digramme de classe")
